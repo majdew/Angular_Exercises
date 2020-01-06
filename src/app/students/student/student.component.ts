@@ -22,7 +22,7 @@ export class StudentComponent implements OnInit {
   }
 
   sendEvent() {
-    this.childEvent.emit('red');
+    this.childEvent.emit(this.color);
 
   }
 

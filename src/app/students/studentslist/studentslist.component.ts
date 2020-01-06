@@ -10,12 +10,18 @@ export class StudentslistComponent implements OnInit {
     { name : 'ahmad', major: 'CS' , color:'#39ed3f'} ,
     { name : 'ali' , major: 'CE' , color:'#e0352f'}
   ];
-  public color;
+  public childEvent;
+  public fontcolor;
  
 
   constructor() {};
 
   ngOnInit() {
+  }
+
+  setColor(color){
+    this.fontcolor= color;
+
   }
 
 }
