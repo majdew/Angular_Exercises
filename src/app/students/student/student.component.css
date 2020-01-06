@@ -1,0 +1,15 @@
+.student-element {
+    margin: 10px;
+    border: black 1px solid;
+    padding: 5px;
+}
+.color-div{
+    width: 10px;
+    height:10px;
+    border:1px solid black;
+    border-radius: 10px;
+    
+}
+.color-div:hover{
+    cursor: pointer ;
+}

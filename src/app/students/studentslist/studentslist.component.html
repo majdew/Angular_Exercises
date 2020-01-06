@@ -1,0 +1,4 @@
+<h1 (color)='$event' [style.color]='color'>students</h1>
+<div *ngFor="let student of students">
+    <app-student [name]="student.name" [major]="student.major" [color]="student.color"></app-student>
+</div>
