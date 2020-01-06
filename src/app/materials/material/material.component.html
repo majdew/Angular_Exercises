@@ -1,16 +1,16 @@
-<div class="material-element">
+<div class="material-element"  [routerLink]="['/material', material.title , material.date]">
     <div>
         <span>
-            title: {{title}}
+            title: {{material.title}}
         </span>
     </div>
     <div>
         <span>
-            date: {{date}}
+            date: {{material.date}}
         </span>
     </div>
-    <a routerlink="/material">click</a>
 </div>
+<router-outlet></router-outlet>
 
 
 

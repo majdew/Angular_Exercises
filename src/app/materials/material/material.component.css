@@ -3,13 +3,6 @@
     margin: 10px;
     border: black 1px solid;
     padding: 5px;
-}
-
-a {
-    color: black;
-}
-
-a:hover {
     cursor: pointer;
-    color: coral;
 }
+

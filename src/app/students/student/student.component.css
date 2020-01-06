@@ -2,11 +2,12 @@
     margin: 10px;
     border: black 1px solid;
     padding: 5px;
+    cursor: pointer;
 }
 .color-div{
     width: 10px;
     height:10px;
-    border:1px solid black;
+    border:1px solid white;
     border-radius: 10px;
     
 }

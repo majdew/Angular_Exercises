@@ -1,13 +1,14 @@
-<div class="student-element">
-    <div>
+<div class="student-element" >
+    <div [routerLink]="['/student' , student.name , student.major]">
         <span>
-            name: {{name}}
+            name: {{student.name}}
         </span>
     </div>
     <div>
         <span>
-            major: {{major}}
+            major: {{student.major}}
         </span>
     </div>
-    <div class="color-div" [ngStyle]="{'background-color' : divcolor}" (click)="sendEvent()"> </div>
+    <div class="color-div" [ngStyle]="{'background-color' : student.color}" (click)="sendEvent()"> </div>
 </div>
+<router-outlet></router-outlet>

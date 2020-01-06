@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-studentview',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./studentview.component.css']
 })
 export class StudentviewComponent implements OnInit {
+  public name;
+  public major;
 
-  constructor() { }
+  constructor(private actRoute: ActivatedRoute) { 
+    this.name = this.actRoute.snapshot.params.name;
+    this.major = this.actRoute.snapshot.params.major;
+  }
 
   ngOnInit() {
   }

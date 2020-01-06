@@ -1,0 +1,6 @@
+.student-view-element {
+    margin: 10px;
+    border: black 1px solid;
+    padding: 5px;
+    cursor: pointer;
+}

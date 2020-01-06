@@ -7,11 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  @Input() public name;
-  @Input() public major;
-  @Input('color') public divcolor;
+  @Input() public student;
   @Output() public childEvent : EventEmitter<any>= new EventEmitter();
-
 
   constructor() {
   }
@@ -20,7 +17,7 @@ export class StudentComponent implements OnInit {
   }
 
   sendEvent() {
-    this.childEvent.emit(this.divcolor);
+    this.childEvent.emit(this.student.color);
   }
 
 }

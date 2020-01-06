@@ -10,7 +10,7 @@ a {
 
 a:hover {
     cursor: pointer;
-    color: coral;
+    color: gray;
 }
 .headtitle{
     width: 100%;
