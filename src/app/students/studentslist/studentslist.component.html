@@ -1,5 +1,5 @@
-<h1 (sendEvent)='setColor($event)' >students</h1>
+<h1 (childEvent)="fontcolor=$event" [ngStyle]="{'color':fontcolor}">students</h1>
 <div *ngFor="let student of students">
-    <app-student [name]="student.name" [major]="student.major" [color]="student.color"></app-student>
+    <app-student [name]="student.name" [major]="student.major" [color]="student.color" (childEvent)="fontcolor=$event"></app-student>
 </div>
 

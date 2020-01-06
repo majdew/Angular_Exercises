@@ -9,7 +9,5 @@
             major: {{major}}
         </span>
     </div>
-    <div class="color-div" [style.background-color]='divcolor' (click)="sendEvent()"> 
-
-    </div>
+    <div class="color-div" [ngStyle]="{'background-color' : divcolor}" (click)="sendEvent()"> </div>
 </div>

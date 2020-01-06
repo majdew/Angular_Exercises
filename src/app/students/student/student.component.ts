@@ -10,20 +10,17 @@ export class StudentComponent implements OnInit {
   @Input() public name;
   @Input() public major;
   @Input('color') public divcolor;
-  @Output() childEvent: EventEmitter<any> = new EventEmitter();
-  public color;
+  @Output() public childEvent : EventEmitter<any>= new EventEmitter();
 
 
-  constructor() { 
-    this.color = this.divcolor;
+  constructor() {
   }
 
   ngOnInit() {
   }
 
   sendEvent() {
-    this.childEvent.emit(this.color);
-
+    this.childEvent.emit(this.divcolor);
   }
 
 }
