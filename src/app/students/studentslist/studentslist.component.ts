@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-studentslist',
@@ -6,31 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./studentslist.component.css']
 })
 export class StudentslistComponent implements OnInit {
-  public students  = [
-    { name : 'ahmad', major: 'CS' , color:'#39ed3f'} ,
-    { name : 'ali' , major: 'CE' , color:'#e0352f'}
-  ];
-  
-  public fontcolor = "";
+  private students : Student [];
+  private fontcolor : String = "";
  
-
-  constructor() {
-
+  constructor( private studentService : StudentService) {
+    this.students = this.studentService.getStudents();
   };
 
   ngOnInit() {
   }
+
   ngAfterViewInit(){
     console.log('ngAfterViewInit')
   }
+
   ngAfterViewChecked(){
     console.log('ngAfterViewChecked')
   }
 
   insertStudentIntoList(student){
-    this.students.push(student);
+    this.studentService.insertStudentIntoServiceList(student);
   }
-  
-
-
 }

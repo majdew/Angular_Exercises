@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Student } from '../student';
 
 @Component({
   selector: '[app-student]',
@@ -7,13 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  @Input() public student;
-  @Output() public childEvent : EventEmitter<any>= new EventEmitter();
+  @Input() private student : Student;
+  @Output() private colorClickEvent : EventEmitter<String>= new EventEmitter();
 
   constructor() {
     console.log('constructor');
-
   }
+
   ngOnChanges(){
     console.log('ngOnChanges');
   }
@@ -24,14 +24,12 @@ export class StudentComponent implements OnInit {
 
   ngOnDestroy() {
     console.log('ngOnDestroy');
-
-
   }
+
   ngAfterContentInit(){
     console.log('ngAfterContentInit');
-
-
   }
+
   ngDoCheck(){
     console.log('ngDoCheck');
   }
@@ -42,9 +40,8 @@ export class StudentComponent implements OnInit {
     console.log('ngAfterViewChecked')
   }
 
-
-  sendEvent() {
-    this.childEvent.emit(this.student.color);
+  sendColorHeaderTitle() {
+    this.colorClickEvent.emit(this.student.getColor());
   }
 
 }

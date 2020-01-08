@@ -22,7 +22,5 @@ export class MaterialService {
         return this.materials[i] ; 
     }
     return null;
-
   }
-
 }

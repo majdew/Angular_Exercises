@@ -10,7 +10,9 @@ import { Material } from '../material';
 export class MaterialComponent implements OnInit {
   @Input() private material : Material;
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
   }

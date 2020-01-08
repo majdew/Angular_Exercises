@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Student } from '../student';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-studentview',
@@ -7,12 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./studentview.component.css']
 })
 export class StudentviewComponent implements OnInit {
-  public name;
-  public major;
+  private id:Number;
+  private student:Student;
 
-  constructor(private actRoute: ActivatedRoute) { 
-    this.name = this.actRoute.snapshot.params.name;
-    this.major = this.actRoute.snapshot.params.major;
+  constructor(private actRoute: ActivatedRoute , private studentService:StudentService) { 
+    this.id = this.actRoute.snapshot.params.id;
+    this.student = this.studentService.getStudentById(this.id);
   }
 
   ngOnInit() {
