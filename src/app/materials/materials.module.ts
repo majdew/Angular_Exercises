@@ -7,6 +7,7 @@ import { AppRoutingModule } from './../app-routing.module';
 
 
 
+
 @NgModule({
   declarations: [MaterialslistComponent, MaterialComponent, MaterialviewComponent],
   imports: [

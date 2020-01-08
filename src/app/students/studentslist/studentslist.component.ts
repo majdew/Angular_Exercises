@@ -14,10 +14,19 @@ export class StudentslistComponent implements OnInit {
   public fontcolor = "";
  
 
-  constructor() {};
+  constructor() {
+
+  };
 
   ngOnInit() {
   }
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit')
+  }
+  ngAfterViewChecked(){
+    console.log('ngAfterViewChecked')
+  }
+  
 
 
 }

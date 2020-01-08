@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MaterialService} from '../material.service'
 
 @Component({
   selector: 'app-materialslist',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./materialslist.component.css']
 })
 export class MaterialslistComponent implements OnInit {
-  public materials  = [
-    { title : 'Java', date: '1/2/2020'} ,
-    { title : 'Android' , date: '3/5/2020'}
-  ];
+   public materials ;
 
-  constructor() { }
+
+  constructor(private materialService : MaterialService) { 
+    this.getMaterials();
+
+  }
 
   ngOnInit() {
+  }
+  getMaterials() : void {
+    this.materials = this.materialService.materials ;
+      
   }
 
 }

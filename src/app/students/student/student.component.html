@@ -1,5 +1,6 @@
 <div class="student-element" >
     <div [routerLink]="['/student' , student.name , student.major]">
+        <span> {{birthdate| date}}</span>
         <span>
             name: {{student.name}}
         </span>
@@ -12,3 +13,5 @@
     <div class="color-div" [ngStyle]="{'background-color' : student.color}" (click)="sendEvent()"> </div>
 </div>
 <router-outlet></router-outlet>
+
+

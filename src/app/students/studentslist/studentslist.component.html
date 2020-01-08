@@ -1,5 +1,8 @@
 <h2 (childEvent)="fontcolor=$event" [ngStyle]="{'color':fontcolor}">Students</h2>
 <div *ngFor="let student of students">
-    <app-student  [student]="student" (childEvent)="fontcolor=$event"></app-student>
+    <div app-student  [student]="student" (childEvent)="fontcolor=$event"></div >
 </div>
+
+
+
 
