@@ -4,6 +4,7 @@ import { StudentslistComponent } from './students/studentslist/studentslist.comp
 import { MaterialslistComponent } from './materials/materialslist/materialslist.component';
 import { MaterialviewComponent } from './materials/materialview/materialview.component';
 import { StudentviewComponent } from './students/studentview/studentview.component';
+import { AddstudentComponent } from './students/addstudent/addstudent.component';
 
 
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path:'studentslist' , component: StudentslistComponent},
   { path:'materialslist' , component: MaterialslistComponent},
   { path: 'material/:title/:date' , component:MaterialviewComponent},
-  { path:'student/:name/:major' , component:StudentviewComponent}
+  { path:'student/:name/:major' , component:StudentviewComponent},
+  { path:'addstudent' , component:AddstudentComponent},
 ];
 
 @NgModule({

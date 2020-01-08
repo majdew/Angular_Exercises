@@ -1,8 +1,31 @@
-<form (ngSubmit)="saveStudent()">
-    <label for="name">name:</label>
-    <input name="name" value="Enter name :" formControlName="name" id="name">
-    <label for="major">major:</label>
-    <input name="major" value="Enter major :" formControlName="major" id="major" >
-    <button type ="submit" id="button" ></button>
-
+<form [formGroup]="profileForm" (ngSubmit)="saveStudent()">
+    <div class="form-div">
+        <div class="title-div" >Add Student</div>
+        <div class="input-div">
+            <label for="name">name: </label>
+            <input name="name"  formControlName="name" >
+        </div>
+        <div class="input-div">
+            <label for="major" > major: </label>
+            <input name="major"  formControlName="major">
+        </div>
+        <div class="button-div">
+            <button type ="submit" >Add</button>
+        </div>
+    </div>
 </form>
+<div class="student-view-element">
+    <h4> Added  Student Information : </h4>
+<div>
+    <div>
+        <span>
+            name:{{student.name}}
+        </span>
+    </div>
+    <div>
+        <span>
+            major:{{student.major}}
+        </span>
+    </div>
+</div>
+</div>
