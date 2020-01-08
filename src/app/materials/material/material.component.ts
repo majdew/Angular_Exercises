@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Material } from '../material';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./material.component.css']
 })
 export class MaterialComponent implements OnInit {
-  @Input() public material;
+  @Input() private material : Material;
 
   constructor() { }
 

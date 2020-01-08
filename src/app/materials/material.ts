@@ -17,10 +17,10 @@ export class Material {
         this.title = title;
     }
 
-    
     setDate(date:String) : void{
         this.date = date;
     }
+    
     getId() : Number{
         return this.id;
     }

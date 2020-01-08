@@ -19,12 +19,4 @@ export class MaterialviewComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
-
-
-
-
-  
-
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MaterialService} from '../material.service'
+import { Material } from '../material';
 
 @Component({
   selector: 'app-materialslist',
@@ -7,19 +8,14 @@ import {MaterialService} from '../material.service'
   styleUrls: ['./materialslist.component.css']
 })
 export class MaterialslistComponent implements OnInit {
-   public materials ;
+   private materials : Material[] ;
 
 
   constructor(private materialService : MaterialService) { 
-    this.getMaterials();
-
+    this.materials=this.materialService.getMaterials();
   }
 
   ngOnInit() {
-  }
-  getMaterials() : void {
-    this.materials = this.materialService.materials ;
-      
   }
 
 }

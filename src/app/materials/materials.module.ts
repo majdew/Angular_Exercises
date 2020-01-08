@@ -5,9 +5,6 @@ import { MaterialComponent } from './material/material.component';
 import { MaterialviewComponent } from './materialview/materialview.component';
 import { AppRoutingModule } from './../app-routing.module';
 
-
-
-
 @NgModule({
   declarations: [MaterialslistComponent, MaterialComponent, MaterialviewComponent],
   imports: [
