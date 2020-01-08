@@ -22,6 +22,7 @@ export class AddstudentComponent implements OnInit {
   }
   saveStudent(){
     this.newstudentEvent.emit(this.profileForm.value);
+    this.profileForm.reset();
   }
 
 
