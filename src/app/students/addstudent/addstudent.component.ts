@@ -9,7 +9,8 @@ import { FormGroup, FormControl  } from '@angular/forms';
 export class AddstudentComponent implements OnInit {
    private profileForm = new FormGroup({
     name : new FormControl(''),
-    major : new FormControl('')
+    major : new FormControl(''),
+    color : new FormControl('')
 
   });
 
