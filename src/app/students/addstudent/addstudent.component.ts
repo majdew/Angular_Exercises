@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit , EventEmitter , Output } from '@angular/core';
+import { FormGroup, FormControl  } from '@angular/forms';
 
 @Component({
   selector: 'app-addstudent',
@@ -7,22 +7,21 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./addstudent.component.css']
 })
 export class AddstudentComponent implements OnInit {
-  private student ={
-    name : "default",
-    major : "default"
-  }
-  private nmae = new FormControl('majd');
-  private profileForm = new FormGroup({
+   private profileForm = new FormGroup({
     name : new FormControl(''),
     major : new FormControl('')
 
   });
+
+  @Output()  private newstudentEvent :EventEmitter <any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
   saveStudent(){
-    this.student = this.profileForm.value;
+    this.newstudentEvent.emit(this.profileForm.value);
   }
+
 
 }

@@ -9,8 +9,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class StudentComponent implements OnInit {
   @Input() public student;
   @Output() public childEvent : EventEmitter<any>= new EventEmitter();
-  private hi ="";
-  private birthdate = new Date(1999, 26 ,6);
 
   constructor() {
     console.log('constructor');

@@ -26,6 +26,10 @@ export class StudentslistComponent implements OnInit {
   ngAfterViewChecked(){
     console.log('ngAfterViewChecked')
   }
+
+  insertStudentIntoList(student){
+    this.students.push(student);
+  }
   
 
 
