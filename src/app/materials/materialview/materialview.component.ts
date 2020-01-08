@@ -9,16 +9,12 @@ import {Material } from '../material'
   styleUrls: ['./materialview.component.css']
 })
 export class MaterialviewComponent implements OnInit {
-  private title;
-  private date;
-  private id ;
-  private materials : Material [];
+  private id : Number;
   private material : Material;
 
   constructor(private actRoute: ActivatedRoute , private materialService : MaterialService) {
-    this.title = this.actRoute.snapshot.params.title;
-    this.date = this.actRoute.snapshot.params.date;
-    this .materials = this.materialService.materials;
+    this.id = this.actRoute.snapshot.params.id;
+    this.material = this.materialService.getMaterialById(this.id);
   }
 
   ngOnInit() {

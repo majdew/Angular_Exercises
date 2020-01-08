@@ -11,7 +11,7 @@ import { AddstudentComponent } from './students/addstudent/addstudent.component'
 const routes: Routes = [
   { path:'studentslist' , component: StudentslistComponent},
   { path:'materialslist' , component: MaterialslistComponent},
-  { path: 'material/:title/:date' , component:MaterialviewComponent},
+  { path: 'material/:id' , component:MaterialviewComponent},
   { path:'student/:name/:major' , component:StudentviewComponent},
   { path:'addstudent' , component:AddstudentComponent},
 ];
