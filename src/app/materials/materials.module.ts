@@ -5,9 +5,11 @@ import { MaterialComponent } from './material/material.component';
 import { MaterialviewComponent } from './materialview/materialview.component';
 import { MaterialRoutingModule } from './materialrouting.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { TestpipeComponent } from './testpipe/testpipe.component';
+import { MypipePipe } from './mypipe.pipe';
 
 @NgModule({
-  declarations: [MaterialslistComponent, MaterialComponent, MaterialviewComponent],
+  declarations: [MaterialslistComponent, MaterialComponent, MaterialviewComponent, TestpipeComponent, MypipePipe],
   imports: [
     CommonModule,
     MaterialRoutingModule,
