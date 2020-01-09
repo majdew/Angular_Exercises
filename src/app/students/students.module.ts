@@ -6,13 +6,15 @@ import { StudentviewComponent } from './studentview/studentview.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StudentRoutingModule } from './studentrouting.module';
 
 @NgModule({
   declarations: [StudentslistComponent, StudentComponent, StudentviewComponent, AddstudentComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StudentRoutingModule
   ],
   exports: [
     StudentComponent,
