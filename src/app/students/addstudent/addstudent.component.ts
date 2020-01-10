@@ -1,5 +1,5 @@
 import { Component, OnInit , EventEmitter , Output } from '@angular/core';
-import { FormGroup, FormControl  } from '@angular/forms';
+import { FormGroup, FormControl, Validators  } from '@angular/forms';
 import { Student } from '../student';
 
 @Component({
@@ -9,8 +9,8 @@ import { Student } from '../student';
 })
 export class AddstudentComponent implements OnInit {
   private profileForm = new FormGroup({
-    name : new FormControl(''),
-    major : new FormControl(''),
+    name : new FormControl(null, [Validators.required ,Validators.minLength(4)]),
+    major : new FormControl(null,[Validators.required]),
     color : new FormControl('')
 
   });
@@ -23,11 +23,13 @@ export class AddstudentComponent implements OnInit {
   }
 
   saveStudent(){
+    if(!this.profileForm.invalid){
     let name = this.profileForm.value.name;
     let major = this.profileForm.value.major;
     let color = this.profileForm.value.color;
     this.student= new Student(name , major , color);
     this.newStudentEvent.emit(this.student);
+    }
     this.profileForm.reset();
   }
 

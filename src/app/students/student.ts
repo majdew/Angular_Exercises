@@ -3,7 +3,7 @@ export class Student {
     private name:String;
     private major:String;
     private color:String;
-    private static COUNT=3;
+    private static COUNT=1;
 
     constructor(name:String , major:String , color:String){
         this.setId();
@@ -12,7 +12,7 @@ export class Student {
         this.color = color;
     }
 
-    setId() : void {
+    private setId() : void {
         this.id = Student.COUNT++;
     }
 
