@@ -23,3 +23,11 @@ button {
     cursor: pointer;
 }
 
+.error-class{
+    font-size: small;
+    color: red;
+}
+
+.error-input{
+    border: 1px red solid;
+}

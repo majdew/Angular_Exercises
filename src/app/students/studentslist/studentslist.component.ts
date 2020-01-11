@@ -11,11 +11,10 @@ export class StudentslistComponent implements OnInit {
   private students : Student [];
   private fontcolor : String = "";
  
-  constructor( private studentService : StudentService) {
-    this.students = this.studentService.getStudents();
-  };
+  constructor( private studentService : StudentService) {};
 
   ngOnInit() {
+    this.students = this.studentService.getStudents();
   }
 
   ngAfterViewInit(){
