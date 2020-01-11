@@ -6,7 +6,7 @@
             <input  name="name"  formControlName="name" [ngClass]="{'error-input' : submitted && control.name.errors } " >
             <div *ngIf="submitted && control.name.errors ">
                 <div class="error-class" *ngIf="submitted && control.name.errors.required">Name is required !</div>
-                <div class="error-class" *ngIf="submitted && control.name.errors.minlength">Name must be at least 6 characters !</div>
+                <div class="error-class" *ngIf="submitted && control.name.errors.minlength">Name must be at least 4 characters !</div>
             </div>
         </div>
         <div class="input-div">
