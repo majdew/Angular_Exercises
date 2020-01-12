@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Student } from './student';
 
-@Injectable({
-  providedIn: 'root'
-})
+
 export class StudentService {
   private students : Student[] = [
     new Student ( 'ahmed' , 'CS' , 'red') ,

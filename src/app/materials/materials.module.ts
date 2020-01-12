@@ -7,6 +7,7 @@ import { MaterialRoutingModule } from './materialrouting.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { TestpipeComponent } from './testpipe/testpipe.component';
 import { MypipePipe } from './mypipe.pipe';
+import { MaterialService } from './material.service';
 
 @NgModule({
   declarations: [MaterialslistComponent, MaterialComponent, MaterialviewComponent, TestpipeComponent, MypipePipe],
@@ -19,6 +20,7 @@ import { MypipePipe } from './mypipe.pipe';
     MaterialslistComponent,
     MaterialviewComponent,
     MaterialComponent
-  ]
+  ],
+  providers: [MaterialService]
 })
 export class MaterialsModule { }
