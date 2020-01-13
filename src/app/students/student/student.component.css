@@ -13,6 +13,10 @@
 .color-div:hover{
     cursor: pointer ;
 }
+.materials-list{
+    margin-left: 20px;
+}
+
 :host {
     display: block;
     background-color: rgb(230, 230, 230);

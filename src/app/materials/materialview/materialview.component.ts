@@ -15,6 +15,7 @@ export class MaterialviewComponent implements OnInit {
   constructor(private actRoute: ActivatedRoute , private materialService : MaterialService) {
     this.id = this.actRoute.snapshot.params.id;
     this.material = this.materialService.getMaterialById(this.id);
+
   }
 
   ngOnInit() {

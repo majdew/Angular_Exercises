@@ -32,7 +32,7 @@ export class AddstudentComponent implements OnInit {
     let name = this.profileForm.value.name;
     let major = this.profileForm.value.major;
     let color = this.profileForm.value.color;
-    this.student= new Student(name , major , color);
+    this.student= new Student(name , major , color , []);
     this.newStudentEvent.emit(this.student);
     this.submitted = false;
     this.reset();

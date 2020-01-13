@@ -3,13 +3,15 @@ export class Student {
     private name:String;
     private major:String;
     private color:String;
+    private materialIdArray : number [];
     private static COUNT=1;
 
-    constructor(name:String , major:String , color:String){
+    constructor(name:String , major:String , color:String , materialIdArray: number[]){
         this.setId();
         this.name = name;
         this.major = major;
         this.color = color;
+        this.materialIdArray = materialIdArray ;
     }
 
     private setId() : void {
@@ -42,6 +44,9 @@ export class Student {
 
     getColor() : String  {
         return this.color ; 
+    }
+    getMaterialIdArray() : number []  {
+        return this.materialIdArray ; 
     }
 
     checkStudentlById(id:Number) : boolean{

@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Material } from './material';
 
-
+@Injectable({
+  providedIn : "root"
+  }
+)
 export class MaterialService {
   private materials: Material[]  = [
     new Material(1 , "java" , "3/4/2010"),

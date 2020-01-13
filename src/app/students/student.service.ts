@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Student } from './student';
+import { Material } from '../materials/material';
+import { MaterialService } from '../materials/material.service';
 
-
+@Injectable()
 export class StudentService {
   private students : Student[] = [
-    new Student ( 'ahmed' , 'CS' , 'red') ,
-    new Student('ali' , 'CE' , 'green')
+    new Student ( 'ahmed' , 'CS' , 'red' ,[1 ]) ,
+    new Student('ali' , 'CE' , 'green' , [2 ])
   ];
 
-  constructor() { }
+
+  constructor(private materialService : MaterialService) {
+
+   }
 
   getStudents() : Student[]{
     return this.students;
@@ -24,5 +29,15 @@ export class StudentService {
 
   insertStudentIntoServiceList(student:Student):void {
     this.students.push(student);
+  }
+  getStudentMaterials(student : Student) : Material[]{
+    let materials : Material[] = [];
+    let materialsId : number [] = student.getMaterialIdArray() ;
+    for (let i =0 ; i<materialsId.length ; i++){
+      let material : Material = this.materialService.getMaterialById(materialsId[i]);
+      materials.push (material);
+
+    }
+    return materials;
   }
 }

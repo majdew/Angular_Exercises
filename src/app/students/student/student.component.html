@@ -5,7 +5,12 @@
     <div>
         <span> major: {{student.getMajor()}} </span>
     </div>
+    <div >Materials list:</div>
+    <div class = "materials-list" *ngFor  = " let material of materials">
+        <li  [routerLink] = "['/material' , material.getId() ]">{{material.getTitle()}}</li>
+    </div>
     <div class="color-div" [ngStyle]="{'background-color' : student.getColor()}" (click)="sendColorHeaderTitle()"> </div>
 </div>
+
 
 

@@ -8,6 +8,7 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentRoutingModule } from './studentrouting.module';
 import { StudentService } from './student.service';
+import { MaterialComponent } from '../materials/material/material.component';
 
 @NgModule({
   declarations: [StudentslistComponent, StudentComponent, StudentviewComponent, AddstudentComponent],
